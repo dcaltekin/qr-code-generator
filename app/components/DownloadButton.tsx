@@ -4,12 +4,13 @@ import React from "react";
 
 interface DownloadButtonProps {
   id: string;
+  size: number;
 }
 
-const DownloadButton: React.FC<DownloadButtonProps> = ({ id }) => {
+const DownloadButton: React.FC<DownloadButtonProps> = ({ id, size }) => {
   const handleDownload = () => {
     const qrCodeSvg = document.getElementById(id);
-    if (qrCodeSvg) {
+    if (qrCodeSvg && size >= 200) {
       const svgString = new XMLSerializer().serializeToString(qrCodeSvg);
       const blob = new Blob([svgString], { type: "image/svg+xml" });
       const url = URL.createObjectURL(blob);
