@@ -26,7 +26,7 @@ export default function QRCodePattern() {
 
   return (
     <div className="flex justify-center items-center flex-col h-screen ">
-      <div className="bg-white flex flex-col items-center justify-center gap-y-8 px-48 py-12 rounded-2xl shadow-2xl ">
+      <div className="bg-white flex flex-col items-center justify-center gap-y-8 px-4 md:px-48 py-12 rounded-2xl shadow-2xl ">
         <Tabs />
         <div className="w-full">
           <div className="relative  w-full ">
